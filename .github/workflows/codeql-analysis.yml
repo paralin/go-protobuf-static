@@ -39,7 +39,7 @@ jobs:
         go-version: ${{ matrix.go }}
 
     - name: Initialize CodeQL
-      uses: github/codeql-action/init@dd196fa9ce80b6bacc74ca1c32bd5b0ba22efca7 # v3.28.3
+      uses: github/codeql-action/init@dd746615b3b9d728a6a37ca2045b68ca76d4841a # v3.28.8
       with:
         languages: ${{ matrix.language }}
 
@@ -47,4 +47,4 @@ jobs:
       run: go build -mod=readonly -v ./...
 
     - name: Perform CodeQL Analysis
-      uses: github/codeql-action/analyze@dd196fa9ce80b6bacc74ca1c32bd5b0ba22efca7 # v3.28.3
+      uses: github/codeql-action/analyze@dd746615b3b9d728a6a37ca2045b68ca76d4841a # v3.28.8
